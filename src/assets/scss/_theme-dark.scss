@@ -1,0 +1,169 @@
+// :root CSS dark variables
+
+
+[data-layout-mode="dark"]{
+
+  // Color system - Dark Mode only
+  $gray-100: #212529;
+  $gray-200: #262626;
+  $gray-300: #2e2e2e;
+  $gray-400: #757575;
+  $gray-500: #8f9198;
+  $gray-600: #adb5bd;
+  $gray-700: #adb5bd;
+  $gray-800: #f9f9f9;
+  $gray-900: #f8f9fa;
+
+  $grays: (
+      "100": $gray-100,
+      "200": $gray-200,
+      "300": $gray-300,
+      "400": $gray-400,
+      "500": $gray-500,
+      "600": $gray-600,
+      "700": $gray-700,
+      "800": $gray-800,
+      "900": $gray-900
+  );
+
+  // Prefix for :root CSS variables
+  @each $color, $value in $grays {
+      --#{$variable-prefix}gray-#{$color}: #{$value};
+  }
+
+  // Vertical Sidebar - Default Light
+
+  --#{$variable-prefix}sidebar-bg: #2e2e2e;
+  --#{$variable-prefix}sidebar-menu-item-color: #878a92;
+  --#{$variable-prefix}sidebar-menu-item-active-color: #4eac6d;
+  --#{$variable-prefix}sidebar-menu-item-active-bg: #f7f7ff;
+  --#{$variable-prefix}sidebar-sub-bg: #262626;
+
+  // footer
+  --#{$variable-prefix}footer-bg: rgba(46,46,46,.5); 
+
+  // Display
+  --#{$variable-prefix}display-none: block;
+  --#{$variable-prefix}display-block: none;
+
+    // Chat
+    --#{$variable-prefix}chat-text-color:     rgba(255,255,255,.8);
+    --#{$variable-prefix}chat-primary-bg:     #383838;
+
+    // card-title-desc
+  --#{$variable-prefix}card-title-desc: #{$gray-400};
+
+
+  // Horizontal nav
+  --#{$variable-prefix}topnav-bg: #{lighten($gray-200, 2.5%)};
+  --#{$variable-prefix}topnav-item-color: #{$gray-400};
+  --#{$variable-prefix}topnav-item-color-active: #{$white};
+
+  // twocolumn menu
+  --#{$variable-prefix}twocolumn-menu-iconview-bg: #{$white};
+  --#{$variable-prefix}twocolumn-menu-bg:  #{$white};
+    
+  // two column dark
+  --#{$variable-prefix}twocolumn-menu-iconview-bg-dark: var(--#{$variable-prefix}vertical-menu-bg-dark);
+  --#{$variable-prefix}twocolumn-menu-bg-dark:  #30363a;
+  --#{$variable-prefix}twocolumn-menu-item-color-dark: var(--#{$variable-prefix}vertical-menu-item-color-dark);
+  --#{$variable-prefix}twocolumn-menu-item-active-color-dark:  #{$white};
+  --#{$variable-prefix}twocolumn-menu-item-active-bg-dark:  #{rgba($white, .15)};
+
+  // boxed 
+  --#{$variable-prefix}boxed-body-bg: #{darken($gray-100, 4%)};
+
+  // heading-color
+  --#{$variable-prefix}heading-color: #{$gray-700};
+  
+  // component variable
+
+  --#{$variable-prefix}light: #{$gray-300};
+  --#{$variable-prefix}light-rgb: #{to-rgb($gray-300)};
+  --#{$variable-prefix}dark: #{$gray-800};
+  --#{$variable-prefix}dark-rgb: #{to-rgb($gray-800)};
+  --#{$variable-prefix}text-muted: #{$gray-500};
+
+  // link
+  --#{$variable-prefix}link-color: #{$gray-700};
+  --#{$variable-prefix}link-hover-color: #{$gray-700};
+
+  // Border variable
+  --#{$variable-prefix}border-color:  #333333;
+
+  // dropdown
+  --#{$variable-prefix}dropdown-bg: #333333;
+  --#{$variable-prefix}dropdown-border-color : #383838;
+  --#{$variable-prefix}dropdown-link-color: #{$gray-500};
+  --#{$variable-prefix}dropdown-link-hover-color:  #{$gray-500};
+  --#{$variable-prefix}dropdown-link-hover-bg: #383838;
+  --#{$variable-prefix}dropdown-border-width: 1px;
+
+  // card
+  --#{$variable-prefix}card-bg: #262626;
+  --#{$variable-prefix}card-cap-bg: #{$gray-200};
+  --#{$variable-prefix}card-border-color: #082a3e;
+  --#{$variable-prefix}card-logo-dark: none;
+  --#{$variable-prefix}card-logo-light: block;
+  --#{$variable-prefix}card-box-shadow:   0 2px 3px #04121a;
+
+  // modal
+  --#{$variable-prefix}modal-bg: #{$gray-200};
+  --#{$variable-prefix}modal-content-bg: #{$gray-200};
+  --#{$variable-prefix}modal-content-border-color: #{$gray-300};
+
+  // nav tabs
+  --#{$variable-prefix}nav-tabs-link-active-color: #{$gray-900};
+  --#{$variable-prefix}nav-tabs-link-active-bg: #{$gray-300};
+
+    // accordion
+  --#{$variable-prefix}accordion-button-active-color: #{$white};
+  --#{$variable-prefix}accordion-bg: #{transparent};
+  --#{$variable-prefix}accordion-button-bg: #{$gray-300};
+  --#{$variable-prefix}accordion-button-active-bg :#2e2e2e;
+
+  // table
+  --#{$variable-prefix}table-color: #{$gray-400};
+
+  // Boxed layout 
+  --#{$variable-prefix}boxed-body-bg:       #333847;
+
+    // body
+    --#{$variable-prefix}body-heading-color:  #{$gray-600};
+    --#{$variable-prefix}body-bg : #2e2e2e;
+    --#{$variable-prefix}body-color: #{$gray-500};
+    --#{$variable-prefix}body-color-rgb: #{to-rgb($body-color)};
+
+  // progress
+  --#{$variable-prefix}progress-bg: #{$gray-300};
+
+  // toast
+  --#{$variable-prefix}toast-background-color: #{rgba($gray-300, .85)};
+  --#{$variable-prefix}toast-border-color: #{rgba($white, .1)};
+  --#{$variable-prefix}toast-header-border-color: #{rgba($white, .05)};
+
+  //list
+  --#{$variable-prefix}list-group-hover-bg: #{lighten($gray-200, 2.5%)};
+
+  // popover
+  --#{$variable-prefix}popover-bg: #{lighten($gray-200, 1%)};
+
+  // pagination
+  --#{$variable-prefix}pagination-hover-bg: #{lighten($gray-200, 4%)};
+
+  //form
+  --#{$variable-prefix}input-bg: #333333;
+  --#{$variable-prefix}input-group-addon-border-color: #{$gray-300};
+  --#{$variable-prefix}input-border: #{$gray-300};
+  --#{$variable-prefix}input-border-color: #333333;
+  --#{$variable-prefix}input-focus-border: #{lighten($gray-300, 4%)};
+  --#{$variable-prefix}input-disabled-bg: #{$gray-200};
+
+  // input-group-addon
+  --#{$variable-prefix}input-placeholder-color: #{$gray-500};
+  --#{$variable-prefix}input-group-addon-bg: #{$gray-300};
+
+  //check
+  --#{$variable-prefix}input-check-border:  #{lighten($gray-300, 4%)};
+
+}
